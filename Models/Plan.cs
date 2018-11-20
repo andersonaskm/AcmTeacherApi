@@ -1,25 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace AcmTeacherApi.Models
 {
-    public class Teacher: EntityBase
+    public class Plan: EntityBase
     {
         #region [Properties]
         
         public string Name { get; set; }
-        public string LastName { get; set; }
-        public string NickName { get; set; }
-        public DateTime HiredAt { get; set; }
         public ICollection<Theme> Themes { get; private set; }
+        public ICollection<Student> Students { get; private set; }
 
         #endregion
 
         #region [Ctor]
 
-        public Teacher()
-        {            
+        public Plan()
+        {
             Themes = new List<Theme>();
+            Students = new List<Student>();
         }
 
         #endregion
