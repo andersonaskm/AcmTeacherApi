@@ -26,6 +26,12 @@ namespace AcmTeacherApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            ConfigureApplicationInsights(services);
+        }
+
+        private void ConfigureApplicationInsights(IServiceCollection services)
+        {
+            services.AddApplicationInsightsTelemetry(Configuration); // enable AI trace events (request, trace and exceptions)
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

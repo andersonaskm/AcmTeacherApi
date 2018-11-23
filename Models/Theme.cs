@@ -1,8 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace AcmTeacherApi.Models
 {
+    /// <summary>
+    /// Themes are sports modalities who people get engaged through an academy plan.
+    /// </summary>
     public class Theme: EntityBase
     {
         #region [Properties]
